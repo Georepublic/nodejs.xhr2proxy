@@ -56,6 +56,7 @@ module.exports = function ( options ) {
               host: parsedUrl.hostname,
               port: parsedUrl.port || 80
             });
+            next();
         }else{
             console.log('sending https request to: ', backendUrl);
             httpsProxy.proxyRequest(req, res, {
